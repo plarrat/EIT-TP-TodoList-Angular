@@ -29,8 +29,11 @@
 
 <section class="container">
   <div class="row">
-    <div *ngFor="let elem of liste" class="col-md-6">
+    <div *ngFor="let elem of liste; let i = index" class="col-md-6 mb-5">
       <app-todos-list [titre]="elem"></app-todos-list>
+      <button (click)="deleteTodoList(i, elem)" class="btn btn-danger">
+        Supprimer
+      </button>
     </div>
   </div>
 </section>

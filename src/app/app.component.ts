@@ -21,4 +21,12 @@ export class AppComponent {
     this.inputTodoList = '';
     return null;
   }
+
+  deleteTodoList(indice: number, titre: string) {
+    let rep = confirm(
+      `Etes-vous sur de vouloir supprimer la Liste : ${titre} ?`
+    );
+
+    if (rep === true) this.liste.splice(indice, 1);
+  }
 }

@@ -8,10 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   liste: any;
   inputTodoList: string;
+  search: string;
 
   constructor() {
     this.liste = [];
     this.inputTodoList = '';
+    this.search = '';
   }
 
   addTodoList(): null {

@@ -10,6 +10,8 @@ export class TodosListComponent implements OnInit {
   inputTodos: string = '';
 
   @Input() titre!: string;
+  @Input() search!: string;
+
   constructor() {}
 
   ngOnInit(): void {}

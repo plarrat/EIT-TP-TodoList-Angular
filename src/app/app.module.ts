@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { TodosListComponent } from './todos-list/todos-list.component';
 import { InversePipe } from './inverse.pipe';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
-  declarations: [AppComponent, TodosListComponent, InversePipe],
+  declarations: [AppComponent, TodosListComponent, InversePipe, SearchPipe],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

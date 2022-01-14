@@ -30,4 +30,9 @@ export class TodosListComponent implements OnInit {
   deleteTodos(i: number) {
     this.todos.splice(i, 1);
   }
+
+  updateTodos(indice: number, todo: string): void {
+    let res = prompt('Modifier la todo', todo);
+    if (res !== null && res.trim().length > 0) this.todos[indice] = res;
+  }
 }

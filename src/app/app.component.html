@@ -21,12 +21,8 @@
 
 <section class="container">
   <div class="row">
-    <div class="col-md-6">
-      <app-todos-list titre="jeux à finir"></app-todos-list>
-    </div>
-
-    <div class="col-md-6">
-      <app-todos-list titre="animés en cours"></app-todos-list>
+    <div *ngFor="let elem of liste" class="col-md-6">
+      <app-todos-list [titre]="elem"></app-todos-list>
     </div>
   </div>
 </section>

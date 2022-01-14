@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   liste: any;
+  inputTodoList: string;
 
   constructor() {
-    this.liste = ['Jeux à terminer', 'Series Netflix', 'Devoirs'];
+    this.liste = [];
+    this.inputTodoList = '';
+  }
+
+  addTodoList(): null {
+    let titre = this.inputTodoList.trim();
+    if (titre.length === 0) return null;
+    this.liste.push(titre);
+    this.inputTodoList = '';
+    return null;
   }
 }

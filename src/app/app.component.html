@@ -12,8 +12,16 @@
           type="text"
           class="form-control"
           placeholder="Saisir nom de la TodoList"
+          [(ngModel)]="inputTodoList"
+          (keyup.enter)="addTodoList()"
         />
-        <button class="btn btn-outline-info" type="button">+ Créer</button>
+        <button
+          (click)="addTodoList()"
+          class="btn btn-outline-info"
+          type="button"
+        >
+          + Créer
+        </button>
       </div>
     </div>
   </div>
